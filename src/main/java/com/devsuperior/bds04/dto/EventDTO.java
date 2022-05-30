@@ -3,6 +3,8 @@ package com.devsuperior.bds04.dto;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+
 import com.devsuperior.bds04.entities.Event;
 
 public class EventDTO implements Serializable {
@@ -12,6 +14,7 @@ public class EventDTO implements Serializable {
 	private String name;
 	private LocalDate date;
 	private String url;
+	@NotNull(message="Campo requerido")
 	private Long cityId;
 	
 	public EventDTO() {
